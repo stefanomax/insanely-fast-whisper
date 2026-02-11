@@ -30,7 +30,7 @@ install the following (although optimum might not be necessary)
 ```
 pip install insanely-fast-whisper accelerate optimum
 ```
-in a test with a previously installed environment, the second venv ran half as fast, until these changes were added:
+in a test with a previously installed environment, the second venv ran half as fast. running pip list showed a difference in dependencies. 2nd venv ran at equal speed when the following changes were added:
 ```
 pip install transformers==4.44.0 numpy==1.24.3 tokenizers==0.19.1 huggingface_hub==0.36.2 --force-reinstall
 ```
