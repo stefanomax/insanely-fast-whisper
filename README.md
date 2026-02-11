@@ -1,8 +1,48 @@
+# Quick Setup Instructions 2026
+
+
+
+Install Python 3.10 (or equivalent)
+
+create a root folder to work in
+
+open a powershell script in this folder
+
+in powershell, enter:
+
+```
+python -m venv venv
+```
+
+```
+.\venv\Scripts\Activate
+```
+```
+pip install torch==2.10.0 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
+```
+```
+pip install torchcodec numpy==1.24.3 --index-url https://download.pytorch.org/whl/cu128 --extra-index-url https://pypi.org/simple
+```
+pip install pipx
+```
+pip install insanely-fast-whisper accelerate optimum
+```
+paste ffmpeg full shared exe and dlls (source: https://www.gyan.dev/ffmpeg/builds/#release-builds) from ffmpeg/bin folder into
+
+your root working folder/venv/scripts/
+
+in powershell, run:
+
+```
+insanely-fast-whisper
+```
+
 # Insanely Fast Whisper
 
 An opinionated CLI to transcribe Audio files w/ Whisper on-device! Powered by 🤗 *Transformers*, *Optimum* & *flash-attn*
 
 **TL;DR** - Transcribe **150** minutes (2.5 hours) of audio in less than **98** seconds - with [OpenAI's Whisper Large v3](https://huggingface.co/openai/whisper-large-v3). Blazingly fast transcription is now a reality!⚡️
+
 
 ```
 pipx install insanely-fast-whisper==0.0.15 --force
